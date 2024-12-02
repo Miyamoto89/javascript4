@@ -1,6 +1,8 @@
 const breakfastMenu = ['Pancakes', 'Eggs Benedict', 'Oatmeal', 'Frittata'];
 const mainCourseMenu = ['Steak', 'Pasta', 'Burger', 'Salmon'];
 const dessertMenu = ['Cake', 'Ice Cream', 'Pudding', 'Fruit Salad'];
+const breakfastMenu2 = ['Pancakes- $12', 'Eggs Benedict -$22.99', 'Oatmeal -$21.99', 'Frittata -$15'];
+
 
 const breakfastMenuItemsHTML = breakfastMenu.map((item, index) => "<p>Item" + (index + 1) + ":  " + item + "</p>").join(' ');
 document.getElementById('breakfastMenuItems').innerHTML = breakfastMenuItemsHTML;
@@ -16,3 +18,9 @@ for (let i = 0; i < dessertMenu.length; i++){
     dessertItem += "<p>Item" + (i + 1) + ":  " + dessertMenu[i] + "</p>";
 }
 document.getElementById('dessertMenuItems').innerHTML = dessertItem;
+
+let breakfastItem2 = '';
+breakfastMenu2.forEach((item, index) => {
+    breakfastItem2 += "<p>Item" + (index + 1) + ":  " + item + "</p>";
+})
+document.getElementById('breakfastMenuItems2').innerHTML = breakfastItem2;
